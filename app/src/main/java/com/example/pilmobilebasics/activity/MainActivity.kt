@@ -1,7 +1,8 @@
-package com.example.pilmobilebasics
+package com.example.pilmobilebasics.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.pilmobilebasics.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
