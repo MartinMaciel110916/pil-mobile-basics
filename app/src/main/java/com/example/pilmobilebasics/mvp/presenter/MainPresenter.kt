@@ -11,14 +11,11 @@ class MainPresenter(private val model: MainContract.Model, private val view: Mai
     }
 
     override fun onAddButtonPressed() {
-
     }
 
-    override fun onDecreaseButtonPressed(){
-
+    override fun onDecreaseButtonPressed() {
     }
 
-    override fun onResetButtonPressed(){
-
+    override fun onResetButtonPressed() {
     }
 }
