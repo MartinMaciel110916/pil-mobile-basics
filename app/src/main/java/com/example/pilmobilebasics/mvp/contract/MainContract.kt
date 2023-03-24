@@ -11,6 +11,8 @@ interface MainContract {
     interface Model {
         fun getCounter(): String
         fun reset()
+        fun addToCounter(editCounter: String)
+        fun subtractFromCounter(editCounter: String)
     }
 
     interface View {
@@ -18,5 +20,6 @@ interface MainContract {
         fun onAddButtonPressed(onClick: () -> Unit)
         fun onDecreaseButtonPressed(onClick: () -> Unit)
         fun onResetButtonPressed(onClick: () -> Unit)
+        fun editCounter(): String?
     }
 }
