@@ -20,6 +20,7 @@ interface MainContract {
         fun onAddButtonPressed(onClick: () -> Unit)
         fun onDecreaseButtonPressed(onClick: () -> Unit)
         fun onResetButtonPressed(onClick: () -> Unit)
-        fun editCounter(): String?
+        fun editCounter(): String
+        fun whatIfUserDoesNotInsertNumber()
     }
 }

@@ -1,6 +1,7 @@
 package com.example.pilmobilebasics.mvp.presenter
 
 import com.example.pilmobilebasics.mvp.contract.MainContract
+import com.example.pilmobilebasics.util.Constants.NULL_VALUE
 
 class MainPresenter(private val model: MainContract.Model, private val view: MainContract.View) : MainContract.Presenter {
 
@@ -11,13 +12,20 @@ class MainPresenter(private val model: MainContract.Model, private val view: Mai
     }
 
     override fun onAddButtonPressed() {
-        model.addToCounter(view.editCounter().toString())
-        view.setCounter(model.getCounter())
+        if (view.editCounter() == NULL_VALUE) {
+            view.whatIfUserDoesNotInsertNumber()
+        } else {
+            model.addToCounter(view.editCounter())
+            view.setCounter(model.getCounter()) }
     }
 
     override fun onDecreaseButtonPressed() {
-        model.subtractFromCounter(view.editCounter().toString())
-        view.setCounter(model.getCounter())
+        if (view.editCounter() == NULL_VALUE) {
+            view.whatIfUserDoesNotInsertNumber()
+        } else {
+            model.subtractFromCounter(view.editCounter())
+            view.setCounter(model.getCounter())
+        }
     }
 
     override fun onResetButtonPressed() {
