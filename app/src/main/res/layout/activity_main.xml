@@ -39,7 +39,7 @@
         app:layout_constraintStart_toStartOf="@id/counterTxt"
         app:layout_constraintEnd_toEndOf="@id/counterTxt"
         app:layout_constraintTop_toTopOf="@id/counterTxt"
-        android:autofillHints="Number" />
+        android:autofillHints="@string/hint" />
 
     <Button
         android:id="@+id/btnAdd"

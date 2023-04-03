@@ -28,8 +28,8 @@ class MainPresenterTest {
 
     @Test
     fun `on add button pressed, the counter value should increment`() {
-        val currentCounter = "30"
-        val counterAdder = "20"
+        val currentCounter = "10"
+        val counterAdder = "5"
         every { view.editCounter() } returns counterAdder
         every { view.onAddButtonPressed { view.editCounter() } } returns view.setCounter(currentCounter)
         presenter.onAddButtonPressed()
@@ -38,8 +38,8 @@ class MainPresenterTest {
 
     @Test
     fun `on decrease button pressed, the counter value should decrement`() {
-        val currentCounter = "30"
-        val counterDecrease = "20"
+        val currentCounter = "10"
+        val counterDecrease = "5"
         every { view.editCounter() } returns counterDecrease
         every { view.onDecreaseButtonPressed { view.editCounter() } } returns view.setCounter(currentCounter)
         presenter.onDecreaseButtonPressed()
@@ -48,7 +48,7 @@ class MainPresenterTest {
 
     @Test
     fun `on reset button pressed, the counter value should go back to 0`() {
-        val currentCounter = "30"
+        val currentCounter = "1"
         every { view.onResetButtonPressed { view.setCounter(currentCounter) } } returns view.setCounter(ZERO.toString())
         presenter.onResetButtonPressed()
         verify { view.setCounter(ZERO.toString()) }
